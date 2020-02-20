@@ -18,6 +18,7 @@ def open_file(filename):
     file = open(filename, "r")
     content = file.read()
     return content
+# simply testing
 
 
 def main():
