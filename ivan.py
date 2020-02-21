@@ -25,7 +25,7 @@ def open_file(filename):
 
 
 def main():
-    # opens the dfa.txt file and creates dictionary connecting the tuples and keys
+    # opens the dfa.txt file and creates dictionary connecting the tuples and key
     dfa = open_file("dfa.txt")
     start_states = []
     final_states = []
