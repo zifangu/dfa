@@ -10,7 +10,6 @@ Ivan:
 5. the returned state is in a new 2-tuple (returned state, next char in file)
 6. loop until the last char on the line is reached
 7. compare the returned result to the list of final states
-
 """
 
 
