@@ -1,5 +1,6 @@
-010001
-010101
-10
-110110
-00101
+abbaa
+abba
+a
+abababbbba
+abbaabbbbbbbbbbbbbbbbab
+bbb

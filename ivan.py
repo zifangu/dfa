@@ -54,9 +54,16 @@ def main():
     for line in dfa:
         # print(line)
         if counter == 2:
-            start_state = (line[:-1])
+            start_state = line[:-1]
         elif counter == 3:
-            final_states.append(line[:-1])
+            temp = line.split(",")
+            count = 1
+            for item in temp:
+                if count != len(temp):
+                    final_states.append(item)
+                else:
+                    final_states.append(item[:-1])
+                count += 1
         elif counter > 3:
             temp = line.split(",")
             rule_dictionary[(temp[0], temp[1])] = temp[2][:-1]
@@ -64,7 +71,7 @@ def main():
         counter += 1
 
     # print(start_states)
-    # print(final_states)
+    print("final:", final_states)
     # print(rule_dictionary)
 
     # read in different possibilities to see if accepted
