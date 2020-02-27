@@ -67,14 +67,14 @@ def main():
         elif counter > 3:
             line = line.strip()
             temp = line.split(",")
-            print(temp)
+            # print(temp)
             rule_dictionary[(temp[0], temp[1])] = temp[2]
             # print(line[0])
         counter += 1
 
     # print(start_states)
     # print("final:", final_states)
-    print(rule_dictionary)
+    # print(rule_dictionary)
 
     # read in different possibilities to see if accepted
     trans_states = open_file("input.txt")
