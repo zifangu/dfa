@@ -24,6 +24,7 @@ def return_states(string, dictionary, start_state):
     temp_state = start_state
     for i in string:
         temp_state = dictionary.get((temp_state, i))
+        # print(temp_state)
     return temp_state
 
 
@@ -52,20 +53,23 @@ def main():
     # transition_rules = []
     counter = 0
     for line in dfa:
-        # print(line)
+        line = line.strip()
         if counter == 2:
-            start_state = line[:-1]
+            start_state = line
+            # print(start_state)
         elif counter == 3:
-            temp = line.split(",")
-            count = 1
-            for item in temp:
-                if count != len(temp):
-                    final_states.append(item)
-                else:
-                    final_states.append(item[:-1])
-                count += 1
+            final_states = line.split(",")
+            # count = 1
+            # print("temp", temp)
+            # for item in temp:
+            #     # if count != len(temp):
+            #     #     final_states.append(item)
+            #     # else:
+            #           final_states.append(item[:-1)
+            #     count += 1
+            # print("final:", final_states)
         elif counter > 3:
-            line = line.strip()
+            # line = line.strip()
             temp = line.split(",")
             # print(temp)
             rule_dictionary[(temp[0], temp[1])] = temp[2]
@@ -80,13 +84,16 @@ def main():
     trans_states = open_file("input.txt")
     transition = []
     for line in trans_states:
-        transition.append(line[:-1])
+        line = line.strip()
+        transition.append(line)
     # print(transition)
+
     result_list = []
     for i in transition:
         result_list.append(return_states(i, rule_dictionary, start_state))
 
     # write the output file from result_list
+    # print(result_list)
     output = open("output.txt", "w+")
     print_result(output, result_list, final_states)
     output.close()

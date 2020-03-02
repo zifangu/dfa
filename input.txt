@@ -1,11 +1,6 @@
-100110
-00100
-01
-1110
-01000
-0000
-0001
-1
-00
-1000
-111101111
+abbaa
+abba
+a
+abababbbba
+abbaabbbbbbbbbbbbbbbbab
+bbb
