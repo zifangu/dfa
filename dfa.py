@@ -9,7 +9,7 @@ Ivan:
 4. create a function that take the 2-tuple, and return end state
 5. the returned state is in a new 2-tuple (returned state, next char in file)
 6. loop until the last char on the line is reached
-7. compare the returned result to the list of final states,
+7. compare the returned result to the list of final states
 """
 
 
