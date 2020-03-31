@@ -1,5 +1,4 @@
 # dfa
-Class project from Theory of Computation
 
 The structure of dfa.txt will be as follows:
 
