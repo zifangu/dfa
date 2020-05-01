@@ -2,7 +2,7 @@
 
 dfa.py will read in a text file called dfa.txt and construct a DFA. Then it reads in input.txt to determine whether each input strings can be accepted or not by the DFA. The result is reflected in output.txt as each line contains the result "acctpt" or "reject" for every line in input.txt.
 
-Files "input copy.txt" and "dfa copy.txt" are different test files for dfa.py. Both test cases produced consisent answers identical to the results from manually contructed DFAs.
+Files "dfa.txt" and "dfa copy.txt" are different test files for dfa.py. Both test cases produced consisent answers identical to the results from manually contructed DFAs.
   
 input.txt contains strings on each line that will run on the DFA.
  
