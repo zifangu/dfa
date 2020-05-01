@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 
 """
-Ivan:
+dfa.txt structure:
+     Line 1: the states of the DFA (separated by commas, if there is more than one state)
+ Line 2: the alphabet of the DFA (separated by commas, if there is more than one symbol)
+ Line 3: the starting state of the DFA
+ Line 4: the final/accept states of the DFA (separated by commas, if there is more than one accept state)
+ Line 5 and onward: the transition rules, where each rule takes the form a,b,c (where being in state a and reading symbol b transitions to new state c)
+
+Algorithm:
 1. read in dfa.txt
-2. put states, alphabets, start states, final states into separate lists
+2. Place states, alphabets, start states, final states into separate lists
 3. rules: create a dictionary of a 2-tuple (start, path) and end from dfa.txt
 3.5 read in input.txt. start collecting paths
 4. create a function that take the 2-tuple, and return end state
@@ -21,8 +28,15 @@ def open_file(filename):
 
 
 def return_states(string, dictionary, start_state):
+    """
+    :param string: input strings to be processed
+    :param dictionary: 2-tuple is the key, the new state is the value
+    :param start_state: initial state of the DFA
+    :return: the last state after the entire string is processed
+    """
     temp_state = start_state
     for i in string:
+        # the new state is immediately processed as the new temp_state for the next character i
         temp_state = dictionary.get((temp_state, i))
         # print(temp_state)
     return temp_state
@@ -59,15 +73,7 @@ def main():
             # print(start_state)
         elif counter == 3:
             final_states = line.split(",")
-            # count = 1
-            # print("temp", temp)
-            # for item in temp:
-            #     # if count != len(temp):
-            #     #     final_states.append(item)
-            #     # else:
-            #           final_states.append(item[:-1)
-            #     count += 1
-            # print("final:", final_states)
+
         elif counter > 3:
             # line = line.strip()
             temp = line.split(",")
